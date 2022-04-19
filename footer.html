@@ -1,0 +1,70 @@
+    </div>
+
+    <div class="footer">
+        <button id="btn" class="open-modal button is-success is-rounded is-outlined">
+            <small class="mr-2">UPLOAD</small>
+            <i class="fas fa-file-import"></i>
+        </button>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-card">
+                <section class="modal-card-body is-rounded dropzone" id="upload-zone">
+                    <!-- Drag and Drop -->
+                    <div class="container">
+                        <div class="notification is-light is-primary">
+                            <strong>파일 이름</strong>
+                            <div class="tags are-medium mt-2">
+                                [normal | sus | mal]_[카테고리(확장자-대문자) | 설명]_[크기].[확장자]
+                            </div>
+                        </div>
+
+                        <div class="dz-message d-flex flex-column mt-5">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p class="mt-2">Drag &amp; Drop here or click</p>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+
+            <div class="dz-preview dz-file-preview well" id="dz-preview-template">
+                <div id="template-preview">
+                    <div class="dz-details">
+                        <div class="dz-filename">
+                            ● <span data-dz-name></span> (<span class="dz-size" data-dz-size></span>)
+                        </div>
+                    </div>
+                    <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
+                </div>
+            </div>
+        </div>
+        <button class="delete modal-close is-large" aria-label="close" data-bulma-modal="close"></button>
+    </div>
+
+    <div class="box rm-hide" id="rmenu">
+        <div class="is-mobile is-centered">
+            <div class="list">
+                <ul>
+                    <div class="list-item p-1">
+                        <button id="fn-copy" class="button is-outlined is-link is-small is-fullwidth">이름 복사 <i class="fas fa-copy ml-2"></i></button>
+                    </div>
+                    <div class="list-item p-1">
+                        <button id="rename" class="button is-outlined is-primary is-small is-fullwidth">이름 바꾸기 <i class="fas fa-exchange-alt ml-2"></i></button>
+                    </div>
+                    <div class="list-item pl-1 pr-1 pb-1">
+                        <button id="remove" class="button is-outlined is-danger is-small mt-1 is-fullwidth">삭제 <i class="fas fa-trash-alt ml-2"></i></button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <textarea id="clipboard_target" cols="30" rows="10"></textarea>
+
+    <script type="text/javascript" src="/.fancyindex/dropzone.min.js"></script>
+    <script type="text/javascript" src="/.fancyindex/config.js"></script>
+</body>
+</html>

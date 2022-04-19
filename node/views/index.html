@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hello Bulma!</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="bulma.min.css">
+        <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.min.css">
+    </head>
+    <body>
+        <section class="section">
+            <div class="container">
+                <div class="tile is-ancestor">
+                    <div class="tile is-3 is-vertical is-parent">
+                        <article class="panel is-primary">
+                            <p class="panel-heading">
+                                Directory
+                            </p>
+                            <div class="panel-block">
+                                <p class="control has-icons-left">
+                                    <input class="input is-primary" type="text" placeholder="Search">
+                                    <span class="icon is-left">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            
+                            <% for(var dirname of data.children){ %>
+                                <a class="panel-block" href="/view/<%= dirname.name %>">
+                                    <span class="panel-icon">
+                                        <i class="fas fa-book" aria-hidden="true"></i>
+                                    </span>
+                                    <%= dirname.name %>
+                                </a>
+                            <% } %>
+                        </article>
+                    </div>
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <table class="table is-striped is-fullwidth">
+                                <thead>
+                                    <th>파일명</th>
+                                    <th>사이즈</th>
+                                    <th>날짜</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
