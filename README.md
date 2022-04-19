@@ -2,7 +2,9 @@
 
 nginx fancy-index custom templates with api server(node express)
 
-# Nginx config
+---
+
+## Nginx config
 
 ```js
 server {
